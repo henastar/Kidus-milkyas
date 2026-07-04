@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Request Help | Mercy Bridge Platform</title>
+  <meta name="description" content="Apply for support or food security packages. Our partner networks verify and process assistance applications.">
+  <link rel="stylesheet" href="styles.css">
+  <script src="translations.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <span class="logo-title" data-i18n="brand_name">Mercy Bridge</span>
+          <span class="logo-subtitle" data-i18n="brand_subtitle">የምሕረት ድልድይ</span>
+        </div>
+      </a>
+      
+      <nav>
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="index.html" class="nav-link" data-i18n="nav_home">Home</a></li>
+          <li><a href="about.html" class="nav-link" data-i18n="nav_about">About</a></li>
+          <li><a href="services.html" class="nav-link" data-i18n="nav_services">Social Services</a></li>
+          <li><a href="needs.html" class="nav-link" data-i18n="nav_needs">Current Needs</a></li>
+          <li><a href="stories.html" class="nav-link" data-i18n="nav_stories">Success Stories</a></li>
+          <li><a href="churches.html" class="nav-link" data-i18n="nav_churches">Churches</a></li>
+          <li><a href="contact.html" class="nav-link" data-i18n="nav_contact">Contact</a></li>
+          <li><a href="login.html" class="nav-link" data-i18n="nav_login">Login</a></li>
+          <li><a href="admin.html" class="nav-link" data-i18n="nav_admin">Admin Dashboard</a></li>
+        </ul>
+      </nav>
+      
+      <div style="display:flex; align-items:center; gap: 15px;">
+        <button id="lang-toggle" data-i18n="lang_btn">አማርኛ</button>
+        <button class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Toggle Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Banner Header -->
+    <section class="hero" style="padding: 60px 0;">
+      <div class="container hero-content">
+        <h1 data-i18n="request_title">Apply for Assistance</h1>
+        <p data-i18n="request_subtitle">If you or someone you know is facing hardship, submit a request. Our team will verify and connect you to support.</p>
+      </div>
+    </section>
+
+    <!-- Request Form Section -->
+    <section class="section">
+      <div class="container" style="max-width: 800px;">
+        <div class="form-wrapper">
+          <h2 class="form-title" data-i18n="request_form_title">Assistance Request Form</h2>
+          
+          <form id="request-help-form">
+            <div class="form-grid">
+              <!-- Name -->
+              <div class="form-group">
+                <label class="form-label" data-i18n="donate_name_label">Full Name</label>
+                <input type="text" id="req-name" class="form-control" required placeholder="Full Name" data-i18n="donate_name_label">
+              </div>
+
+              <!-- Phone -->
+              <div class="form-group">
+                <label class="form-label" data-i18n="vol_phone_label">Phone Number</label>
+                <input type="tel" class="form-control" required placeholder="Phone Number" data-i18n="vol_phone_label">
+              </div>
+
+              <!-- Email -->
+              <div class="form-group">
+                <label class="form-label" data-i18n="donate_email_label">Email Address</label>
+                <input type="email" class="form-control" placeholder="Email Address" data-i18n="donate_email_label">
+              </div>
+
+              <!-- Category -->
+              <div class="form-group">
+                <label class="form-label" data-i18n="req_category_label">Category of Need</label>
+                <select id="req-category" class="form-control" required>
+                  <option value="Food Support" data-i18n="need_cat_food">Food</option>
+                  <option value="Healthcare Support" data-i18n="need_cat_health">Healthcare</option>
+                  <option value="Educational Support" data-i18n="need_cat_education">Education</option>
+                  <option value="Shelter Support" data-i18n="need_cat_shelter">Shelter</option>
+                </select>
+              </div>
+
+              <!-- Urgency -->
+              <div class="form-group">
+                <label class="form-label" data-i18n="req_urgency_label">Urgency Level</label>
+                <select id="req-urgency" class="form-control" required>
+                  <option value="Low" data-i18n="req_urg_low">Low (General Support)</option>
+                  <option value="Medium" data-i18n="req_urg_med">Medium (Needed within 2 weeks)</option>
+                  <option value="High" data-i18n="req_urg_high">High (Immediate/Emergency)</option>
+                </select>
+              </div>
+
+              <!-- Address -->
+              <div class="form-group">
+                <label class="form-label" data-i18n="req_address_label">Residential Address / Neighborhood</label>
+                <input type="text" id="req-address" class="form-control" required placeholder="Residential Address / Neighborhood" data-i18n="req_address_label">
+              </div>
+            </div>
+
+            <!-- Description -->
+            <div class="form-group">
+              <label class="form-label" data-i18n="req_desc_label">Describe Your Situation and Needs</label>
+              <textarea id="req-desc" class="form-control" required placeholder="Please explain what help is needed, urgency, and background..." data-i18n="req_desc_placeholder"></textarea>
+            </div>
+
+            <!-- Documents -->
+            <div class="form-group">
+              <label class="form-label" data-i18n="req_docs_label">Supporting Documents (Optional)</label>
+              <input type="file" class="form-control" style="padding:8px;">
+              <small style="color: var(--color-text-muted); margin-top: 5px;" data-i18n="req_docs_desc">Upload IDs, medical letters, or recommendation letters if available.</small>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width:100%; margin-top:15px;" data-i18n="btn_submit">Submit Application</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <h3 data-i18n="brand_name">Mercy Bridge</h3>
+        <p class="footer-desc-text" data-i18n="footer_desc">Mercy Bridge is a non-profit platform dedicated to bridging the gap between individuals in need and local support networks, churches, and volunteers.</p>
+      </div>
+      <div class="footer-col">
+        <h3 data-i18n="quick_links">Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="about.html" class="footer-link" data-i18n="nav_about">About Us</a></li>
+          <li><a href="services.html" class="footer-link" data-i18n="nav_services">Social Services</a></li>
+          <li><a href="needs.html" class="footer-link" data-i18n="nav_needs">Current Needs</a></li>
+          <li><a href="request-help.html" class="footer-link" data-i18n="nav_request">Request Help</a></li>
+          <li><a href="events.html" class="footer-link" data-i18n="nav_events">Events</a></li>
+          <li><a href="news.html" class="footer-link" data-i18n="nav_news">News</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3 data-i18n="contact_info">Contact Info</h3>
+        <ul class="footer-contact-list">
+          <li class="footer-contact-item">
+            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            <span>Addis Ababa, Ethiopia</span>
+          </li>
+          <li class="footer-contact-item">
+            <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            <span>+251 11 123 4567</span>
+          </li>
+          <li class="footer-contact-item">
+            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            <span>info@mercybridge.org</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p data-i18n="copyright">© 2026 Mercy Bridge Platform. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

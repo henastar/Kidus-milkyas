@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Mercy Bridge Platform</title>
+  <meta name="description" content="Reach out to the Mercy Bridge team. Ask questions, suggest features, or become a supporting donor partner.">
+  <link rel="stylesheet" href="styles.css">
+  <script src="translations.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <span class="logo-title" data-i18n="brand_name">Mercy Bridge</span>
+          <span class="logo-subtitle" data-i18n="brand_subtitle">የምሕረት ድልድይ</span>
+        </div>
+      </a>
+      
+      <nav>
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="index.html" class="nav-link" data-i18n="nav_home">Home</a></li>
+          <li><a href="about.html" class="nav-link" data-i18n="nav_about">About</a></li>
+          <li><a href="services.html" class="nav-link" data-i18n="nav_services">Social Services</a></li>
+          <li><a href="needs.html" class="nav-link" data-i18n="nav_needs">Current Needs</a></li>
+          <li><a href="stories.html" class="nav-link" data-i18n="nav_stories">Success Stories</a></li>
+          <li><a href="churches.html" class="nav-link" data-i18n="nav_churches">Churches</a></li>
+          <li><a href="contact.html" class="nav-link active" data-i18n="nav_contact">Contact</a></li>
+          <li><a href="login.html" class="nav-link" data-i18n="nav_login">Login</a></li>
+          <li><a href="admin.html" class="nav-link" data-i18n="nav_admin">Admin Dashboard</a></li>
+        </ul>
+      </nav>
+      
+      <div style="display:flex; align-items:center; gap: 15px;">
+        <button id="lang-toggle" data-i18n="lang_btn">አማርኛ</button>
+        <button class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Toggle Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Banner Header -->
+    <section class="hero" style="padding: 60px 0;">
+      <div class="container hero-content">
+        <h1 data-i18n="contact_title">Get in Touch</h1>
+        <p data-i18n="contact_subtitle">Have questions, feedback, or want to partner? Drop us a message or visit our office.</p>
+      </div>
+    </section>
+
+    <!-- Contact & Map Section -->
+    <section class="section">
+      <div class="container grid-2" style="align-items: flex-start;">
+        <!-- Left Column: Form -->
+        <div class="form-wrapper" style="width: 100%; padding: 40px;">
+          <h2 class="form-title" style="font-size: 1.5rem; margin-bottom: 20px; text-align: left;" data-i18n="contact_form_title">Contact Form</h2>
+          
+          <form id="contact-form">
+            <div class="form-group">
+              <label class="form-label" data-i18n="donate_name_label">Full Name</label>
+              <input type="text" class="form-control" required placeholder="Full Name" data-i18n="donate_name_label">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" data-i18n="donate_email_label">Email Address</label>
+              <input type="email" class="form-control" required placeholder="Email Address" data-i18n="donate_email_label">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" data-i18n="contact_msg_label">Your Message</label>
+              <textarea class="form-control" required placeholder="Your Message" data-i18n="contact_msg_label"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;" data-i18n="btn_send">Send Message</button>
+          </form>
+        </div>
+
+        <!-- Right Column: Details & Fake Map -->
+        <div style="display:flex; flex-direction:column; gap: 40px; width: 100%;">
+          <div class="card" style="padding:30px;">
+            <h3 style="font-size: 1.3rem; margin-bottom: 20px;" data-i18n="contact_info">Contact Info</h3>
+            
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 20px;">
+              <li style="display:flex; gap: 15px; align-items: flex-start;">
+                <div style="background-color: var(--color-green-light); padding: 8px; border-radius: 50%; display: flex; flex-shrink: 0;">
+                  <svg viewBox="0 0 24 24" style="width: 18px; height: 18px; fill: var(--color-green-primary);"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                </div>
+                <div>
+                  <strong style="display:block; font-size: 0.9rem; color: var(--color-green-primary);">Physical Office</strong>
+                  <span style="color:var(--color-text-muted);">Bole Sub-City, Ward 03, House #450, Addis Ababa, Ethiopia</span>
+                </div>
+              </li>
+
+              <li style="display:flex; gap: 15px; align-items: flex-start;">
+                <div style="background-color: var(--color-green-light); padding: 8px; border-radius: 50%; display: flex; flex-shrink: 0;">
+                  <svg viewBox="0 0 24 24" style="width: 18px; height: 18px; fill: var(--color-green-primary);"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                </div>
+                <div>
+                  <strong style="display:block; font-size: 0.9rem; color: var(--color-green-primary);">Direct Hotlines</strong>
+                  <span style="color:var(--color-text-muted);">+251 11 123 4567 / +251 911 00 11 22</span>
+                </div>
+              </li>
+
+              <li style="display:flex; gap: 15px; align-items: flex-start;">
+                <div style="background-color: var(--color-green-light); padding: 8px; border-radius: 50%; display: flex; flex-shrink: 0;">
+                  <svg viewBox="0 0 24 24" style="width: 18px; height: 18px; fill: var(--color-green-primary);"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                </div>
+                <div>
+                  <strong style="display:block; font-size: 0.9rem; color: var(--color-green-primary);">Support Email</strong>
+                  <span style="color:var(--color-text-muted);">info@mercybridge.org / support@mercybridge.org</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Fake Map Container -->
+          <div style="height:250px; background-color: var(--color-green-light); border-radius: var(--border-radius-md); border:1px solid var(--color-border); overflow:hidden; display:flex; align-items:center; justify-content:center; position:relative; box-shadow: var(--box-shadow);">
+            <svg viewBox="0 0 24 24" style="width: 60px; height:60px; fill: var(--color-green-primary); z-index: 2;"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            <!-- Mock map background lines -->
+            <div style="position:absolute; width:100%; height:100%; background: linear-gradient(90deg, transparent 49%, rgba(0,0,0,0.05) 50%, transparent 51%), linear-gradient(0deg, transparent 49%, rgba(0,0,0,0.05) 50%, transparent 51%); background-size: 40px 40px;"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQs Section -->
+    <section class="section-alt">
+      <div class="container">
+        <div class="section-header">
+          <h2 data-i18n="contact_faq_title">Frequently Asked Questions</h2>
+        </div>
+
+        <div class="faq-list">
+          <!-- FAQ 1 -->
+          <div class="faq-item">
+            <div class="faq-question">
+              <span data-i18n="faq1_q">How does Mercy Bridge ensure transparency?</span>
+              <svg viewBox="0 0 24 24"><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/></svg>
+            </div>
+            <div class="faq-answer">
+              <p data-i18n="faq1_a">Every financial donation is matched with a specific Need ID. Progress is tracked publicly on the needs page, and verified receipts/reports are uploaded by the partner church coordinator.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-item">
+            <div class="faq-question">
+              <span data-i18n="faq2_q">Can I request support for a relative in another town?</span>
+              <svg viewBox="0 0 24 24"><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/></svg>
+            </div>
+            <div class="faq-answer">
+              <p data-i18n="faq2_a">Yes. You can submit a request on their behalf. We will match them with the nearest partner church in our directory to verify their needs locally.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-item">
+            <div class="faq-question">
+              <span data-i18n="faq3_q">Is there any charge for platform services?</span>
+              <svg viewBox="0 0 24 24"><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/></svg>
+            </div>
+            <div class="faq-answer">
+              <p data-i18n="faq3_a">No. Mercy Bridge is 100% free for beneficiaries, partner churches, and volunteers. Operating costs are funded by specific donor grants.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <h3 data-i18n="brand_name">Mercy Bridge</h3>
+        <p class="footer-desc-text" data-i18n="footer_desc">Mercy Bridge is a non-profit platform dedicated to bridging the gap between individuals in need and local support networks, churches, and volunteers.</p>
+      </div>
+      <div class="footer-col">
+        <h3 data-i18n="quick_links">Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="about.html" class="footer-link" data-i18n="nav_about">About Us</a></li>
+          <li><a href="services.html" class="footer-link" data-i18n="nav_services">Social Services</a></li>
+          <li><a href="needs.html" class="footer-link" data-i18n="nav_needs">Current Needs</a></li>
+          <li><a href="request-help.html" class="footer-link" data-i18n="nav_request">Request Help</a></li>
+          <li><a href="events.html" class="footer-link" data-i18n="nav_events">Events</a></li>
+          <li><a href="news.html" class="footer-link" data-i18n="nav_news">News</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3 data-i18n="contact_info">Contact Info</h3>
+        <ul class="footer-contact-list">
+          <li class="footer-contact-item">
+            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            <span>Addis Ababa, Ethiopia</span>
+          </li>
+          <li class="footer-contact-item">
+            <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            <span>+251 11 123 4567</span>
+          </li>
+          <li class="footer-contact-item">
+            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            <span>info@mercybridge.org</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p data-i18n="copyright">© 2026 Mercy Bridge Platform. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Social Services | Mercy Bridge Platform</title>
+  <meta name="description" content="Explore the diverse social welfare and support services offered by Mercy Bridge Platform to assist families and individuals.">
+  <link rel="stylesheet" href="styles.css">
+  <script src="translations.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <span class="logo-title" data-i18n="brand_name">Mercy Bridge</span>
+          <span class="logo-subtitle" data-i18n="brand_subtitle">የምሕረት ድልድይ</span>
+        </div>
+      </a>
+      
+      <nav>
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="index.html" class="nav-link" data-i18n="nav_home">Home</a></li>
+          <li><a href="about.html" class="nav-link" data-i18n="nav_about">About</a></li>
+          <li><a href="services.html" class="nav-link active" data-i18n="nav_services">Social Services</a></li>
+          <li><a href="needs.html" class="nav-link" data-i18n="nav_needs">Current Needs</a></li>
+          <li><a href="stories.html" class="nav-link" data-i18n="nav_stories">Success Stories</a></li>
+          <li><a href="churches.html" class="nav-link" data-i18n="nav_churches">Churches</a></li>
+          <li><a href="contact.html" class="nav-link" data-i18n="nav_contact">Contact</a></li>
+          <li><a href="login.html" class="nav-link" data-i18n="nav_login">Login</a></li>
+          <li><a href="admin.html" class="nav-link" data-i18n="nav_admin">Admin Dashboard</a></li>
+        </ul>
+      </nav>
+      
+      <div style="display:flex; align-items:center; gap: 15px;">
+        <button id="lang-toggle" data-i18n="lang_btn">አማርኛ</button>
+        <button class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Toggle Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Banner Header -->
+    <section class="hero" style="padding: 60px 0;">
+      <div class="container hero-content">
+        <h1 data-i18n="services_title">Our Social Services</h1>
+        <p data-i18n="services_subtitle">Providing comprehensive welfare support through our community-led initiatives.</p>
+      </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section class="section">
+      <div class="container">
+        <div class="grid-3">
+          <!-- Food Support -->
+          <div class="card">
+            <div class="card-image">
+              <svg viewBox="0 0 24 24"><path d="M12 2c1.1 0 2 .9 2 2v2.22c3.38.48 6 3.38 6 6.78H4c0-3.4 2.62-6.3 6-6.78V4c0-1.1.9-2 2-2zm10 11H2c-.55 0-1 .45-1 1v1c0 2.21 1.79 4 4 4h14c2.21 0 4-1.79 4-4v-1c0-.55-.45-1-1-1z"/></svg>
+            </div>
+            <div class="card-body">
+              <span class="card-tag" data-i18n="need_cat_food">Food</span>
+              <h3 data-i18n="serv_food_title">Food Security Program</h3>
+              <p data-i18n="serv_food_desc">Distributing nutritious food baskets and organizing community kitchens for low-income families.</p>
+              <a href="request-help.html" class="btn btn-primary btn-sm" style="margin-top:auto;" data-i18n="nav_request">Request Help</a>
+            </div>
+          </div>
+
+          <!-- Housing & Shelter -->
+          <div class="card">
+            <div class="card-image">
+              <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+            </div>
+            <div class="card-body">
+              <span class="card-tag" data-i18n="need_cat_shelter">Shelter</span>
+              <h3 data-i18n="serv_shelter_title">Temporary Housing & Shelter</h3>
+              <p data-i18n="serv_shelter_desc">Helping homeless individuals and displaced families find safe, temporary accommodation and clothing.</p>
+              <a href="request-help.html" class="btn btn-primary btn-sm" style="margin-top:auto;" data-i18n="nav_request">Request Help</a>
+            </div>
+          </div>
+
+          <!-- Educational Support -->
+          <div class="card">
+            <div class="card-image">
+              <svg viewBox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zm0 13c-2.76 0-5-2.24-5-5h10c0 2.76-2.24 5-5 5z"/></svg>
+            </div>
+            <div class="card-body">
+              <span class="card-tag" data-i18n="need_cat_education">Education</span>
+              <h3 data-i18n="serv_edu_title">Educational Support</h3>
+              <p data-i18n="serv_edu_desc">Providing textbooks, uniforms, school supplies, and scholarships for children in need.</p>
+              <a href="request-help.html" class="btn btn-primary btn-sm" style="margin-top:auto;" data-i18n="nav_request">Request Help</a>
+            </div>
+          </div>
+
+          <!-- Medical Assistance -->
+          <div class="card">
+            <div class="card-image">
+              <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg>
+            </div>
+            <div class="card-body">
+              <span class="card-tag" data-i18n="need_cat_health">Healthcare</span>
+              <h3 data-i18n="serv_health_title">Medical & Health Assistance</h3>
+              <p data-i18n="serv_health_desc">Helping cover prescription costs, clinic fees, and providing free health screening checkups.</p>
+              <a href="request-help.html" class="btn btn-primary btn-sm" style="margin-top:auto;" data-i18n="nav_request">Request Help</a>
+            </div>
+          </div>
+
+          <!-- Counseling & Reintegration -->
+          <div class="card">
+            <div class="card-image">
+              <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H7c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.04-.42 1.99-1.07 2.75z"/></svg>
+            </div>
+            <div class="card-body">
+              <span class="card-tag" data-i18n="nav_about">General</span>
+              <h3 data-i18n="serv_counsel_title">Counseling & Reintegration</h3>
+              <p data-i18n="serv_counsel_desc">Offering psychological counseling, spiritual support, and job skills training for long-term recovery.</p>
+              <a href="request-help.html" class="btn btn-primary btn-sm" style="margin-top:auto;" data-i18n="nav_request">Request Help</a>
+            </div>
+          </div>
+
+          <!-- Disaster Relief -->
+          <div class="card">
+            <div class="card-image">
+              <svg viewBox="0 0 24 24"><path d="M12 2L1 21h22L12 2zm1 14h-2v-2h2v2zm0-4h-2V8h2v4z"/></svg>
+            </div>
+            <div class="card-body">
+              <span class="card-tag" data-i18n="nav_about">Emergency</span>
+              <h3 data-i18n="serv_disaster_title">Emergency Relief</h3>
+              <p data-i18n="serv_disaster_desc">Responding rapidly to localized disasters, fires, floods, and seasonal emergencies.</p>
+              <a href="request-help.html" class="btn btn-primary btn-sm" style="margin-top:auto;" data-i18n="nav_request">Request Help</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <h3 data-i18n="brand_name">Mercy Bridge</h3>
+        <p class="footer-desc-text" data-i18n="footer_desc">Mercy Bridge is a non-profit platform dedicated to bridging the gap between individuals in need and local support networks, churches, and volunteers.</p>
+      </div>
+      <div class="footer-col">
+        <h3 data-i18n="quick_links">Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="about.html" class="footer-link" data-i18n="nav_about">About Us</a></li>
+          <li><a href="services.html" class="footer-link" data-i18n="nav_services">Social Services</a></li>
+          <li><a href="needs.html" class="footer-link" data-i18n="nav_needs">Current Needs</a></li>
+          <li><a href="request-help.html" class="footer-link" data-i18n="nav_request">Request Help</a></li>
+          <li><a href="events.html" class="footer-link" data-i18n="nav_events">Events</a></li>
+          <li><a href="news.html" class="footer-link" data-i18n="nav_news">News</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3 data-i18n="contact_info">Contact Info</h3>
+        <ul class="footer-contact-list">
+          <li class="footer-contact-item">
+            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            <span>Addis Ababa, Ethiopia</span>
+          </li>
+          <li class="footer-contact-item">
+            <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            <span>+251 11 123 4567</span>
+          </li>
+          <li class="footer-contact-item">
+            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            <span>info@mercybridge.org</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p data-i18n="copyright">© 2026 Mercy Bridge Platform. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

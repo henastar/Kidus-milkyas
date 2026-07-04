@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Current Needs | Mercy Bridge Platform</title>
+  <meta name="description" content="View the active, verified help requests and donation campaigns on Mercy Bridge Platform. Make a difference today.">
+  <link rel="stylesheet" href="styles.css">
+  <script src="translations.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <span class="logo-title" data-i18n="brand_name">Mercy Bridge</span>
+          <span class="logo-subtitle" data-i18n="brand_subtitle">የምሕረት ድልድይ</span>
+        </div>
+      </a>
+      
+      <nav>
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="index.html" class="nav-link" data-i18n="nav_home">Home</a></li>
+          <li><a href="about.html" class="nav-link" data-i18n="nav_about">About</a></li>
+          <li><a href="services.html" class="nav-link" data-i18n="nav_services">Social Services</a></li>
+          <li><a href="needs.html" class="nav-link active" data-i18n="nav_needs">Current Needs</a></li>
+          <li><a href="stories.html" class="nav-link" data-i18n="nav_stories">Success Stories</a></li>
+          <li><a href="churches.html" class="nav-link" data-i18n="nav_churches">Churches</a></li>
+          <li><a href="contact.html" class="nav-link" data-i18n="nav_contact">Contact</a></li>
+          <li><a href="login.html" class="nav-link" data-i18n="nav_login">Login</a></li>
+          <li><a href="admin.html" class="nav-link" data-i18n="nav_admin">Admin Dashboard</a></li>
+        </ul>
+      </nav>
+      
+      <div style="display:flex; align-items:center; gap: 15px;">
+        <button id="lang-toggle" data-i18n="lang_btn">አማርኛ</button>
+        <button class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Toggle Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Banner Header -->
+    <section class="hero" style="padding: 60px 0;">
+      <div class="container hero-content">
+        <h1 data-i18n="needs_title">Current Needs & Appeals</h1>
+        <p data-i18n="needs_subtitle">Browse verified requests and contribute directly to support them.</p>
+      </div>
+    </section>
+
+    <!-- Search & Filters -->
+    <section class="container" style="margin-top: 40px;">
+      <div class="filter-bar">
+        <div class="search-box">
+          <div class="search-input-wrapper">
+            <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+            <input type="text" id="search-input" placeholder="Search by title or category..." data-i18n="needs_search_placeholder">
+          </div>
+        </div>
+        <div class="filter-options">
+          <button class="filter-btn active" data-filter="all" data-i18n="btn_all">All</button>
+          <button class="filter-btn" data-filter="food" data-i18n="need_cat_food">Food</button>
+          <button class="filter-btn" data-filter="health" data-i18n="need_cat_health">Healthcare</button>
+          <button class="filter-btn" data-filter="education" data-i18n="need_cat_education">Education</button>
+          <button class="filter-btn" data-filter="shelter" data-i18n="need_cat_shelter">Shelter</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Needs Cards Grid -->
+    <section class="section" style="padding-top: 0;">
+      <div class="container">
+        <div class="grid-2">
+          <!-- Card 1 -->
+          <div class="card searchable-card" data-category="health">
+            <div class="card-body">
+              <span class="card-tag" data-i18n="need_cat_health">Healthcare</span>
+              <h3 data-i18n="need1_title">Medical Expense for Baby Bethel</h3>
+              <p data-i18n="need1_desc">Bethel needs urgent specialized pediatric care. Funds will cover hospital admission and surgery fees.</p>
+              
+              <div class="progress-container">
+                <div class="progress-bar-wrapper">
+                  <div class="progress-bar-fill" style="width: 72%;"></div>
+                </div>
+                <div class="progress-labels">
+                  <span class="raised"><span data-i18n="need_raised">Raised</span>: $3,600</span>
+                  <span class="goal"><span data-i18n="need_goal">Goal</span>: $5,000</span>
+                </div>
+              </div>
+
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-top: auto;">
+                <span style="font-weight: 500; font-size: 0.9rem; color: var(--color-denied);">12 <span data-i18n="need_days_left">days left</span></span>
+                <a href="donate.html" class="btn btn-secondary btn-sm" data-i18n="btn_donate_now">Donate Now</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="card searchable-card" data-category="education">
+            <div class="card-body">
+              <span class="card-tag" data-i18n="need_cat_education">Education</span>
+              <h3 data-i18n="need2_title">School Kits for 100 Children</h3>
+              <p data-i18n="need2_desc">Help children from low-income families return to school with bags, notebooks, and uniforms.</p>
+              
+              <div class="progress-container">
+                <div class="progress-bar-wrapper">
+                  <div class="progress-bar-fill" style="width: 45%;"></div>
+                </div>
+                <div class="progress-labels">
+                  <span class="raised"><span data-i18n="need_raised">Raised</span>: $1,350</span>
+                  <span class="goal"><span data-i18n="need_goal">Goal</span>: $3,000</span>
+                </div>
+              </div>
+
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-top: auto;">
+                <span style="font-weight: 500; font-size: 0.9rem; color: var(--color-pending);">25 <span data-i18n="need_days_left">days left</span></span>
+                <a href="donate.html" class="btn btn-secondary btn-sm" data-i18n="btn_donate_now">Donate Now</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="card searchable-card" data-category="food">
+            <div class="card-body">
+              <span class="card-tag" data-i18n="need_cat_food">Food</span>
+              <h3 data-i18n="need3_title">Community Food Bank Supplies</h3>
+              <p data-i18n="need3_desc">Restocking our primary food store with wheat, oil, and lentils for monthly distributions.</p>
+              
+              <div class="progress-container">
+                <div class="progress-bar-wrapper">
+                  <div class="progress-bar-fill" style="width: 90%;"></div>
+                </div>
+                <div class="progress-labels">
+                  <span class="raised"><span data-i18n="need_raised">Raised</span>: $7,200</span>
+                  <span class="goal"><span data-i18n="need_goal">Goal</span>: $8,000</span>
+                </div>
+              </div>
+
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-top: auto;">
+                <span style="font-weight: 500; font-size: 0.9rem; color: var(--color-approved);">3 <span data-i18n="need_days_left">days left</span></span>
+                <a href="donate.html" class="btn btn-secondary btn-sm" data-i18n="btn_donate_now">Donate Now</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="card searchable-card" data-category="shelter">
+            <div class="card-body">
+              <span class="card-tag" data-i18n="need_cat_shelter">Shelter</span>
+              <h3 data-i18n="need4_title">Emergency Rent for Single Mother</h3>
+              <p data-i18n="need4_desc">Support Martha, a mother of three, with 3 months of emergency rent after losing her small shop.</p>
+              
+              <div class="progress-container">
+                <div class="progress-bar-wrapper">
+                  <div class="progress-bar-fill" style="width: 15%;"></div>
+                </div>
+                <div class="progress-labels">
+                  <span class="raised"><span data-i18n="need_raised">Raised</span>: $180</span>
+                  <span class="goal"><span data-i18n="need_goal">Goal</span>: $1,200</span>
+                </div>
+              </div>
+
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-top: auto;">
+                <span style="font-weight: 500; font-size: 0.9rem; color: var(--color-pending);">40 <span data-i18n="need_days_left">days left</span></span>
+                <a href="donate.html" class="btn btn-secondary btn-sm" data-i18n="btn_donate_now">Donate Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <h3 data-i18n="brand_name">Mercy Bridge</h3>
+        <p class="footer-desc-text" data-i18n="footer_desc">Mercy Bridge is a non-profit platform dedicated to bridging the gap between individuals in need and local support networks, churches, and volunteers.</p>
+      </div>
+      <div class="footer-col">
+        <h3 data-i18n="quick_links">Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="about.html" class="footer-link" data-i18n="nav_about">About Us</a></li>
+          <li><a href="services.html" class="footer-link" data-i18n="nav_services">Social Services</a></li>
+          <li><a href="needs.html" class="footer-link" data-i18n="nav_needs">Current Needs</a></li>
+          <li><a href="request-help.html" class="footer-link" data-i18n="nav_request">Request Help</a></li>
+          <li><a href="events.html" class="footer-link" data-i18n="nav_events">Events</a></li>
+          <li><a href="news.html" class="footer-link" data-i18n="nav_news">News</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3 data-i18n="contact_info">Contact Info</h3>
+        <ul class="footer-contact-list">
+          <li class="footer-contact-item">
+            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            <span>Addis Ababa, Ethiopia</span>
+          </li>
+          <li class="footer-contact-item">
+            <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            <span>+251 11 123 4567</span>
+          </li>
+          <li class="footer-contact-item">
+            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            <span>info@mercybridge.org</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p data-i18n="copyright">© 2026 Mercy Bridge Platform. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

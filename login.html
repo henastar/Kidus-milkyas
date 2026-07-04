@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | Mercy Bridge Platform</title>
+  <meta name="description" content="Secure coordinator and administrator portal access for Mercy Bridge Platform.">
+  <link rel="stylesheet" href="styles.css">
+  <script src="translations.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body style="min-height: 100vh; display: flex; flex-direction: column;">
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <span class="logo-title" data-i18n="brand_name">Mercy Bridge</span>
+          <span class="logo-subtitle" data-i18n="brand_subtitle">የምሕረት ድልድይ</span>
+        </div>
+      </a>
+      
+      <nav>
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="index.html" class="nav-link" data-i18n="nav_home">Home</a></li>
+          <li><a href="about.html" class="nav-link" data-i18n="nav_about">About</a></li>
+          <li><a href="services.html" class="nav-link" data-i18n="nav_services">Social Services</a></li>
+          <li><a href="needs.html" class="nav-link" data-i18n="nav_needs">Current Needs</a></li>
+          <li><a href="stories.html" class="nav-link" data-i18n="nav_stories">Success Stories</a></li>
+          <li><a href="churches.html" class="nav-link" data-i18n="nav_churches">Churches</a></li>
+          <li><a href="contact.html" class="nav-link" data-i18n="nav_contact">Contact</a></li>
+          <li><a href="login.html" class="nav-link active" data-i18n="nav_login">Login</a></li>
+          <li><a href="admin.html" class="nav-link" data-i18n="nav_admin">Admin Dashboard</a></li>
+        </ul>
+      </nav>
+      
+      <div style="display:flex; align-items:center; gap: 15px;">
+        <button id="lang-toggle" data-i18n="lang_btn">አማርኛ</button>
+        <button class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Toggle Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main style="flex-grow: 1; display:flex; align-items:center; justify-content:center; padding: 40px 0; background-color: var(--color-bg-alt);">
+    <div class="container" style="max-width: 480px; width: 100%;">
+      <div class="form-wrapper" style="padding: 40px; border: 1px solid var(--color-border); box-shadow: var(--box-shadow);">
+        <div style="text-align: center; margin-bottom: 24px;">
+          <h1 style="font-size: 1.8rem; margin-bottom: 8px;" data-i18n="login_title">Mercy Bridge Portal</h1>
+          <p style="color: var(--color-text-muted); font-size: 0.95rem;" data-i18n="login_subtitle">Secure access for administrators, social workers, and church network coordinators.</p>
+        </div>
+
+        <form id="login-form">
+          <div class="form-group">
+            <label class="form-label" data-i18n="login_user_label">Username or Email</label>
+            <input type="text" id="username" class="form-control" required placeholder="Username or Email" data-i18n="login_user_label">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" data-i18n="login_pass_label">Password</label>
+            <input type="password" id="password" class="form-control" required placeholder="Password" data-i18n="login_pass_label">
+          </div>
+
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 24px; font-size: 0.9rem;">
+            <label style="display:flex; align-items:center; gap: 8px; cursor:pointer;">
+              <input type="checkbox" style="transform:scale(1.05);"> <span data-i18n="login_rem_label">Remember me</span>
+            </label>
+            <a href="#" onclick="showToast('Password reset email simulated.', 'success')" style="color: var(--color-green-primary); font-weight: 500;" data-i18n="login_forgot">Forgot Password?</a>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%;" data-i18n="btn_login">Sign In</button>
+        </form>
+
+        <div style="margin-top: 24px; text-align: center; background-color: var(--color-gold-light); border: 1px solid rgba(212,175,55,0.3); padding: 12px; border-radius: var(--border-radius-sm); font-size: 0.85rem; font-weight: 600; color: var(--color-gold-hover);">
+          <span data-i18n="login_admin_demo">Demo Creds: admin / admin123</span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <h3 data-i18n="brand_name">Mercy Bridge</h3>
+        <p class="footer-desc-text" data-i18n="footer_desc">Mercy Bridge is a non-profit platform dedicated to bridging the gap between individuals in need and local support networks, churches, and volunteers.</p>
+      </div>
+      <div class="footer-col">
+        <h3 data-i18n="quick_links">Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="about.html" class="footer-link" data-i18n="nav_about">About Us</a></li>
+          <li><a href="services.html" class="footer-link" data-i18n="nav_services">Social Services</a></li>
+          <li><a href="needs.html" class="footer-link" data-i18n="nav_needs">Current Needs</a></li>
+          <li><a href="request-help.html" class="footer-link" data-i18n="nav_request">Request Help</a></li>
+          <li><a href="events.html" class="footer-link" data-i18n="nav_events">Events</a></li>
+          <li><a href="news.html" class="footer-link" data-i18n="nav_news">News</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3 data-i18n="contact_info">Contact Info</h3>
+        <ul class="footer-contact-list">
+          <li class="footer-contact-item">
+            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            <span>Addis Ababa, Ethiopia</span>
+          </li>
+          <li class="footer-contact-item">
+            <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            <span>+251 11 123 4567</span>
+          </li>
+          <li class="footer-contact-item">
+            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            <span>info@mercybridge.org</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p data-i18n="copyright">© 2026 Mercy Bridge Platform. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

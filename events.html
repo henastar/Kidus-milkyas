@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upcoming Events | Mercy Bridge Platform</title>
+  <meta name="description" content="Join our upcoming community drives, food bank volunteer assemblies, and training workshops. RSVP today.">
+  <link rel="stylesheet" href="styles.css">
+  <script src="translations.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <span class="logo-title" data-i18n="brand_name">Mercy Bridge</span>
+          <span class="logo-subtitle" data-i18n="brand_subtitle">የምሕረት ድልድይ</span>
+        </div>
+      </a>
+      
+      <nav>
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="index.html" class="nav-link" data-i18n="nav_home">Home</a></li>
+          <li><a href="about.html" class="nav-link" data-i18n="nav_about">About</a></li>
+          <li><a href="services.html" class="nav-link" data-i18n="nav_services">Social Services</a></li>
+          <li><a href="needs.html" class="nav-link" data-i18n="nav_needs">Current Needs</a></li>
+          <li><a href="stories.html" class="nav-link" data-i18n="nav_stories">Success Stories</a></li>
+          <li><a href="churches.html" class="nav-link" data-i18n="nav_churches">Churches</a></li>
+          <li><a href="contact.html" class="nav-link" data-i18n="nav_contact">Contact</a></li>
+          <li><a href="login.html" class="nav-link" data-i18n="nav_login">Login</a></li>
+          <li><a href="admin.html" class="nav-link" data-i18n="nav_admin">Admin Dashboard</a></li>
+        </ul>
+      </nav>
+      
+      <div style="display:flex; align-items:center; gap: 15px;">
+        <button id="lang-toggle" data-i18n="lang_btn">አማርኛ</button>
+        <button class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Toggle Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Banner Header -->
+    <section class="hero" style="padding: 60px 0;">
+      <div class="container hero-content">
+        <h1 data-i18n="events_title">Upcoming Community Events</h1>
+        <p data-i18n="events_subtitle">Participate in charity drives, clean-ups, and prayer meetings organized by our network.</p>
+      </div>
+    </section>
+
+    <!-- Events Grid -->
+    <section class="section">
+      <div class="container">
+        <div class="grid-3">
+          <!-- Event 1 -->
+          <div class="card">
+            <div class="card-image" style="height: 150px; background-color: var(--color-gold-light);">
+              <svg viewBox="0 0 24 24" style="width: 48px; height: 48px; fill: var(--color-gold);"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm-2-7h-5v5h5v-5z"/></svg>
+            </div>
+            <div class="card-body">
+              <span class="card-tag" data-i18n="vol_int_event">Community Outreach</span>
+              <h3 data-i18n="event1_title">Winter Blanket & Clothing Drive</h3>
+              <p data-i18n="event1_desc">Gathering blankets, jackets, and winter wear for homeless families at Mercy Hall.</p>
+              
+              <div style="border-top: 1px solid var(--color-border); padding-top: 15px; margin-top: auto; font-size: 0.9rem; color: var(--color-text-muted);">
+                <div style="margin-bottom: 5px;"><strong><span data-i18n="event_date">Date</span>:</strong> July 18, 2026</div>
+                <div style="margin-bottom: 5px;"><strong><span data-i18n="event_time">Time</span>:</strong> 9:00 AM - 1:00 PM</div>
+                <div style="margin-bottom: 15px;"><strong><span data-i18n="event_location">Location</span>:</strong> Mercy Hall, Addis Ababa</div>
+              </div>
+              
+              <button class="btn btn-primary btn-sm rsvp-btn" onclick="showToast(localStorage.getItem('mercy_bridge_lang') === 'am' ? 'ምዝገባዎ በተሳካ ሁኔታ ተጠናቋል።' : 'RSVP successful! Thank you for joining.')" data-i18n="btn_rsvp">RSVP Now</button>
+            </div>
+          </div>
+
+          <!-- Event 2 -->
+          <div class="card">
+            <div class="card-image" style="height: 150px; background-color: var(--color-gold-light);">
+              <svg viewBox="0 0 24 24" style="width: 48px; height: 48px; fill: var(--color-gold);"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm-2-7h-5v5h5v-5z"/></svg>
+            </div>
+            <div class="card-body">
+              <span class="card-tag" data-i18n="vol_int_food">Food Bank</span>
+              <h3 data-i18n="event2_title">Community Kitchen Vol-Day</h3>
+              <p data-i18n="event2_desc">Help cook and pack hot meals for elderly residents. No cooking experience required.</p>
+              
+              <div style="border-top: 1px solid var(--color-border); padding-top: 15px; margin-top: auto; font-size: 0.9rem; color: var(--color-text-muted);">
+                <div style="margin-bottom: 5px;"><strong><span data-i18n="event_date">Date</span>:</strong> July 25, 2026</div>
+                <div style="margin-bottom: 5px;"><strong><span data-i18n="event_time">Time</span>:</strong> 8:00 AM - 3:00 PM</div>
+                <div style="margin-bottom: 15px;"><strong><span data-i18n="event_location">Location</span>:</strong> Central Kitchen, Kirkos</div>
+              </div>
+              
+              <button class="btn btn-primary btn-sm rsvp-btn" onclick="showToast(localStorage.getItem('mercy_bridge_lang') === 'am' ? 'ምዝገባዎ በተሳካ ሁኔታ ተጠናቋል።' : 'RSVP successful! Thank you for joining.')" data-i18n="btn_rsvp">RSVP Now</button>
+            </div>
+          </div>
+
+          <!-- Event 3 -->
+          <div class="card">
+            <div class="card-image" style="height: 150px; background-color: var(--color-gold-light);">
+              <svg viewBox="0 0 24 24" style="width: 48px; height: 48px; fill: var(--color-gold);"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm-2-7h-5v5h5v-5z"/></svg>
+            </div>
+            <div class="card-body">
+              <span class="card-tag" data-i18n="vol_int_edu">Education</span>
+              <h3 data-i18n="event3_title">Youth Mentorship Seminar</h3>
+              <p data-i18n="event3_desc">A training session at Holy Trinity Church for volunteers who want to tutor secondary school students.</p>
+              
+              <div style="border-top: 1px solid var(--color-border); padding-top: 15px; margin-top: auto; font-size: 0.9rem; color: var(--color-text-muted);">
+                <div style="margin-bottom: 5px;"><strong><span data-i18n="event_date">Date</span>:</strong> August 02, 2026</div>
+                <div style="margin-bottom: 5px;"><strong><span data-i18n="event_time">Time</span>:</strong> 2:00 PM - 5:00 PM</div>
+                <div style="margin-bottom: 15px;"><strong><span data-i18n="event_location">Location</span>:</strong> Holy Trinity Church Hall</div>
+              </div>
+              
+              <button class="btn btn-primary btn-sm rsvp-btn" onclick="showToast(localStorage.getItem('mercy_bridge_lang') === 'am' ? 'ምዝገባዎ በተሳካ ሁኔታ ተጠናቋል።' : 'RSVP successful! Thank you for joining.')" data-i18n="btn_rsvp">RSVP Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <h3 data-i18n="brand_name">Mercy Bridge</h3>
+        <p class="footer-desc-text" data-i18n="footer_desc">Mercy Bridge is a non-profit platform dedicated to bridging the gap between individuals in need and local support networks, churches, and volunteers.</p>
+      </div>
+      <div class="footer-col">
+        <h3 data-i18n="quick_links">Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="about.html" class="footer-link" data-i18n="nav_about">About Us</a></li>
+          <li><a href="services.html" class="footer-link" data-i18n="nav_services">Social Services</a></li>
+          <li><a href="needs.html" class="footer-link" data-i18n="nav_needs">Current Needs</a></li>
+          <li><a href="request-help.html" class="footer-link" data-i18n="nav_request">Request Help</a></li>
+          <li><a href="events.html" class="footer-link" data-i18n="nav_events">Events</a></li>
+          <li><a href="news.html" class="footer-link" data-i18n="nav_news">News</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3 data-i18n="contact_info">Contact Info</h3>
+        <ul class="footer-contact-list">
+          <li class="footer-contact-item">
+            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            <span>Addis Ababa, Ethiopia</span>
+          </li>
+          <li class="footer-contact-item">
+            <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            <span>+251 11 123 4567</span>
+          </li>
+          <li class="footer-contact-item">
+            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            <span>info@mercybridge.org</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p data-i18n="copyright">© 2026 Mercy Bridge Platform. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

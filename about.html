@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Mercy Bridge Platform</title>
+  <meta name="description" content="Learn about the mission, vision, values, and team driving the Mercy Bridge Platform.">
+  <link rel="stylesheet" href="styles.css">
+  <script src="translations.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <span class="logo-title" data-i18n="brand_name">Mercy Bridge</span>
+          <span class="logo-subtitle" data-i18n="brand_subtitle">የምሕረት ድልድይ</span>
+        </div>
+      </a>
+      
+      <nav>
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="index.html" class="nav-link" data-i18n="nav_home">Home</a></li>
+          <li><a href="about.html" class="nav-link active" data-i18n="nav_about">About</a></li>
+          <li><a href="services.html" class="nav-link" data-i18n="nav_services">Social Services</a></li>
+          <li><a href="needs.html" class="nav-link" data-i18n="nav_needs">Current Needs</a></li>
+          <li><a href="stories.html" class="nav-link" data-i18n="nav_stories">Success Stories</a></li>
+          <li><a href="churches.html" class="nav-link" data-i18n="nav_churches">Churches</a></li>
+          <li><a href="contact.html" class="nav-link" data-i18n="nav_contact">Contact</a></li>
+          <li><a href="login.html" class="nav-link" data-i18n="nav_login">Login</a></li>
+          <li><a href="admin.html" class="nav-link" data-i18n="nav_admin">Admin Dashboard</a></li>
+        </ul>
+      </nav>
+      
+      <div style="display:flex; align-items:center; gap: 15px;">
+        <button id="lang-toggle" data-i18n="lang_btn">አማርኛ</button>
+        <button class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Toggle Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Banner Header -->
+    <section class="hero" style="padding: 60px 0;">
+      <div class="container hero-content">
+        <h1 data-i18n="about_title">About Mercy Bridge Platform</h1>
+        <p data-i18n="about_subtitle">Learn about our origin, mission, values, and the team driving our platform.</p>
+      </div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section class="section">
+      <div class="container grid-2" style="align-items: stretch;">
+        <div class="card" style="padding: 40px; border-top: 4px solid var(--color-green-primary);">
+          <h2 style="margin-bottom: 20px; font-size: 1.8rem;" data-i18n="about_mission_title">Our Mission</h2>
+          <p style="color: var(--color-text-muted); font-size: 1.1rem;" data-i18n="about_mission_desc">To restore hope and dignity by connecting vulnerable individuals with compassionate local churches, dedicated volunteers, and resources.</p>
+        </div>
+        <div class="card" style="padding: 40px; border-top: 4px solid var(--color-gold);">
+          <h2 style="margin-bottom: 20px; font-size: 1.8rem;" data-i18n="about_vision_title">Our Vision</h2>
+          <p style="color: var(--color-text-muted); font-size: 1.1rem;" data-i18n="about_vision_desc">A society where no individual is left unsupported, and where local communities stand strong, unified, and resilient.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Values -->
+    <section class="section-alt">
+      <div class="container">
+        <div class="section-header">
+          <h2 data-i18n="about_values_title">Core Values</h2>
+        </div>
+        
+        <div class="grid-2">
+          <div class="card" style="flex-direction: row; padding: 24px; gap: 20px; align-items: flex-start;">
+            <div style="background-color: var(--color-green-light); padding: 12px; border-radius: 50%; display: flex; flex-shrink: 0;">
+              <svg viewBox="0 0 24 24" style="width: 24px; height: 24px; fill: var(--color-green-primary);"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+            </div>
+            <div>
+              <h3 style="margin-bottom: 8px;" data-i18n="about_val1_title">Compassion</h3>
+              <p style="color: var(--color-text-muted); font-size: 0.95rem;" data-i18n="about_val1_desc">We serve with empathy, respect, and deep care for every human being.</p>
+            </div>
+          </div>
+
+          <div class="card" style="flex-direction: row; padding: 24px; gap: 20px; align-items: flex-start;">
+            <div style="background-color: var(--color-green-light); padding: 12px; border-radius: 50%; display: flex; flex-shrink: 0;">
+              <svg viewBox="0 0 24 24" style="width: 24px; height: 24px; fill: var(--color-green-primary);"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+            </div>
+            <div>
+              <h3 style="margin-bottom: 8px;" data-i18n="about_val2_title">Transparency</h3>
+              <p style="color: var(--color-text-muted); font-size: 0.95rem;" data-i18n="about_val2_desc">We ensure every donation and volunteer effort directly impacts the designated need.</p>
+            </div>
+          </div>
+
+          <div class="card" style="flex-direction: row; padding: 24px; gap: 20px; align-items: flex-start;">
+            <div style="background-color: var(--color-green-light); padding: 12px; border-radius: 50%; display: flex; flex-shrink: 0;">
+              <svg viewBox="0 0 24 24" style="width: 24px; height: 24px; fill: var(--color-green-primary);"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+            </div>
+            <div>
+              <h3 style="margin-bottom: 8px;" data-i18n="about_val3_title">Unity</h3>
+              <p style="color: var(--color-text-muted); font-size: 0.95rem;" data-i18n="about_val3_desc">We bridge differences to unite churches, organizations, and individuals in service.</p>
+            </div>
+          </div>
+
+          <div class="card" style="flex-direction: row; padding: 24px; gap: 20px; align-items: flex-start;">
+            <div style="background-color: var(--color-green-light); padding: 12px; border-radius: 50%; display: flex; flex-shrink: 0;">
+              <svg viewBox="0 0 24 24" style="width: 24px; height: 24px; fill: var(--color-green-primary);"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H7c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.04-.42 1.99-1.07 2.75z"/></svg>
+            </div>
+            <div>
+              <h3 style="margin-bottom: 8px;" data-i18n="about_val4_title">Dignity</h3>
+              <p style="color: var(--color-text-muted); font-size: 0.95rem;" data-i18n="about_val4_desc">We uphold the dignity and privacy of those who seek help, promoting self-reliance.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 data-i18n="about_team_title">Meet Our Team</h2>
+          <p data-i18n="about_team_subtitle">The dedicated staff and board members leading Mercy Bridge.</p>
+        </div>
+
+        <div class="grid-4">
+          <!-- Member 1 -->
+          <div class="card" style="text-align: center;">
+            <div class="card-image" style="height: 180px; background-color: var(--color-green-light);">
+              <svg viewBox="0 0 24 24" style="width: 48px; height: 48px;"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+            </div>
+            <div class="card-body" style="padding: 20px;">
+              <h3>Dawit Yeshitla</h3>
+              <span class="card-tag" style="color: var(--color-green-primary); margin-top: 5px;" data-i18n="team1_role">Executive Director & Founder</span>
+            </div>
+          </div>
+
+          <!-- Member 2 -->
+          <div class="card" style="text-align: center;">
+            <div class="card-image" style="height: 180px; background-color: var(--color-green-light);">
+              <svg viewBox="0 0 24 24" style="width: 48px; height: 48px;"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+            </div>
+            <div class="card-body" style="padding: 20px;">
+              <h3>Martha Hailu</h3>
+              <span class="card-tag" style="color: var(--color-green-primary); margin-top: 5px;" data-i18n="team2_role">Director of Social Services</span>
+            </div>
+          </div>
+
+          <!-- Member 3 -->
+          <div class="card" style="text-align: center;">
+            <div class="card-image" style="height: 180px; background-color: var(--color-green-light);">
+              <svg viewBox="0 0 24 24" style="width: 48px; height: 48px;"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+            </div>
+            <div class="card-body" style="padding: 20px;">
+              <h3>Pastor Solomon Kassa</h3>
+              <span class="card-tag" style="color: var(--color-green-primary); margin-top: 5px;" data-i18n="team3_role">Church Network Coordinator</span>
+            </div>
+          </div>
+
+          <!-- Member 4 -->
+          <div class="card" style="text-align: center;">
+            <div class="card-image" style="height: 180px; background-color: var(--color-green-light);">
+              <svg viewBox="0 0 24 24" style="width: 48px; height: 48px;"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+            </div>
+            <div class="card-body" style="padding: 20px;">
+              <h3>Helen Kidane</h3>
+              <span class="card-tag" style="color: var(--color-green-primary); margin-top: 5px;" data-i18n="team4_role">Lead Platform Administrator</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <h3 data-i18n="brand_name">Mercy Bridge</h3>
+        <p class="footer-desc-text" data-i18n="footer_desc">Mercy Bridge is a non-profit platform dedicated to bridging the gap between individuals in need and local support networks, churches, and volunteers.</p>
+      </div>
+      <div class="footer-col">
+        <h3 data-i18n="quick_links">Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="about.html" class="footer-link" data-i18n="nav_about">About Us</a></li>
+          <li><a href="services.html" class="footer-link" data-i18n="nav_services">Social Services</a></li>
+          <li><a href="needs.html" class="footer-link" data-i18n="nav_needs">Current Needs</a></li>
+          <li><a href="request-help.html" class="footer-link" data-i18n="nav_request">Request Help</a></li>
+          <li><a href="events.html" class="footer-link" data-i18n="nav_events">Events</a></li>
+          <li><a href="news.html" class="footer-link" data-i18n="nav_news">News</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3 data-i18n="contact_info">Contact Info</h3>
+        <ul class="footer-contact-list">
+          <li class="footer-contact-item">
+            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            <span>Addis Ababa, Ethiopia</span>
+          </li>
+          <li class="footer-contact-item">
+            <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            <span>+251 11 123 4567</span>
+          </li>
+          <li class="footer-contact-item">
+            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            <span>info@mercybridge.org</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p data-i18n="copyright">© 2026 Mercy Bridge Platform. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
