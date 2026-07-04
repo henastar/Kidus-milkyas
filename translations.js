@@ -43,7 +43,7 @@ const translations = {
     btn_add_need: "Add New Need",
 
     // Home Page
-    hero_title: "Bridging Compassion and Community Needs",
+    hero_title: "Bridging those who can help with those who need help",
     hero_subtitle: "Mercy Bridge facilitates direct, transparent, and immediate assistance to individuals and families. Join us in making a meaningful impact.",
     hero_cta_donate: "Support a Need",
     hero_cta_request: "Request Assistance",
@@ -64,9 +64,9 @@ const translations = {
     about_title: "About Mercy Bridge Platform",
     about_subtitle: "Learn about our origin, mission, values, and the team driving our platform.",
     about_mission_title: "Our Mission",
-    about_mission_desc: "To restore hope and dignity by connecting vulnerable individuals with compassionate local churches, dedicated volunteers, and resources.",
+    about_mission_desc: "To provide a transparent digital platform that connects the Ethiopian Orthodox Tewahedo Church with donors, volunteers, and beneficiaries; raises public awareness of church social services; mobilizes resources; and facilitates efficient, equitable, and sustainable service delivery for the benefit of communities.",
     about_vision_title: "Our Vision",
-    about_vision_desc: "A society where no individual is left unsupported, and where local communities stand strong, unified, and resilient.",
+    about_vision_desc: "To become a trusted digital platform that strengthens the Ethiopian Orthodox Tewahedo Church's social service by connecting churches, donors, volunteers, and beneficiaries, while promoting faith, compassion, transparency, and strengthening a sustainable social service system.",
     about_values_title: "Core Values",
     about_val1_title: "Compassion",
     about_val1_desc: "We serve with empathy, respect, and deep care for every human being.",
